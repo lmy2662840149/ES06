@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Pay {
+            //修改代码
+            constructor(basepay) {
+                this.basepay = basepay;
+               // this.pay = pay;
+                //this.remuneration = remuneration;
+            }
+        }
+        class TeacherPay extends Pay {
+            constructor(basepay,classHours) {
+                super(basepay);
+                this.remuneration = classHours * 50;
+                this.pay = this.remuneration + this.basepay;
+            }
+        }
+        //修改代码
+        let teaPay = new TeacherPay(5200,60);
+        console.log(teaPay);
+    </script>
+</body>
+</html>
